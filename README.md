@@ -1,4 +1,4 @@
-# Image Transform plugin for FilePond
+# File Rename plugin for FilePond
 
 [![npm version](https://badge.fury.io/js/filepond-plugin-image-transform.svg)](https://badge.fury.io/js/filepond)
 
