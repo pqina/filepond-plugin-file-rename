@@ -1,0 +1,15 @@
+{
+    "name": "filepond-plugin-file-rename",
+    "version": "1.0.0",
+    "description": "File Rename Plugin for FilePond",
+    "homepage": "https://pqina.nl/filepond",
+    "repository": "pqina/filepond-plugin-file-rename",
+    "main": "dist/filepond-plugin-file-rename.js",
+    "browser": "dist/filepond-plugin-file-rename.js",
+    "module": "dist/filepond-plugin-file-rename.esm.js",
+    "license": "MIT",
+    "author": {
+        "name": "PQINA",
+        "url": "https://pqina.nl"
+    }
+}
