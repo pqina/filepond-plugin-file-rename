@@ -1,5 +1,5 @@
 /*
- * FilePondPluginFileRename 1.0.0
+ * FilePondPluginFileRename 1.0.1
  * Licensed under MIT, https://opensource.org/licenses/MIT
  * Please visit https://pqina.nl/filepond for details.
  */
@@ -8,6 +8,7 @@ var plugin$1 = ({ addFilter, utils }) => {
   const {
     Type,
     renameFile,
+    isFile,
     getExtensionFromFilename,
     getFilenameWithoutExtension
   } = utils;
@@ -22,7 +23,7 @@ var plugin$1 = ({ addFilter, utils }) => {
         // reject
         const allowFileRename = query('GET_ALLOW_FILE_RENAME');
         const renameFunction = query('GET_FILE_RENAME_FUNCTION');
-        if (!allowFileRename || !renameFunction) {
+        if (!isFile(file) || !allowFileRename || !renameFunction) {
           resolve(file);
           return;
         }

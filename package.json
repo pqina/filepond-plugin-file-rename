@@ -1,6 +1,6 @@
 {
     "name": "filepond-plugin-file-rename",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "File Rename Plugin for FilePond",
     "homepage": "https://pqina.nl/filepond",
     "repository": "pqina/filepond-plugin-file-rename",
@@ -11,5 +11,8 @@
     "author": {
         "name": "PQINA",
         "url": "https://pqina.nl"
+    },
+    "peerDependencies": {
+        "filepond": "^1.8.0"
     }
 }
