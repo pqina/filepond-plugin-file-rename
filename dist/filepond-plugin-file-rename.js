@@ -1,5 +1,5 @@
 /*
- * FilePondPluginFileRename 1.0.1
+ * FilePondPluginFileRename 1.1.0
  * Licensed under MIT, https://opensource.org/licenses/MIT
  * Please visit https://pqina.nl/filepond for details.
  */
@@ -38,16 +38,26 @@
           return;
         }
 
-        resolve(
-          renameFile(
-            file,
-            renameFunction({
-              name: file.name,
-              basename: getFilenameWithoutExtension(file.name),
-              extension: '.' + getExtensionFromFilename(file.name)
-            })
-          )
-        );
+        // can either return a name or a promise
+        var newFilename = renameFunction({
+          name: file.name,
+          basename: getFilenameWithoutExtension(file.name),
+          extension: '.' + getExtensionFromFilename(file.name)
+        });
+
+        // renames the file and resolves
+        var rename = function rename(name) {
+          resolve(renameFile(file, name));
+        };
+
+        // has returned new filename immidiately
+        if (typeof newFilename === 'string') {
+          rename(newFilename);
+          return;
+        }
+
+        // is promise
+        newFilename.then(rename);
       });
     });
 
