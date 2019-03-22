@@ -5,3 +5,5 @@
 https://pqina.nl/filepond/docs/patterns/plugins/file-rename/
 
 Using the File Rename plugin we can automatically rename files before the are added to FilePond.
+
+[Demo](https://pqina.github.io/filepond-plugin-file-rename/)
