@@ -10,7 +10,6 @@ declare module "filepond-plugin-file-rename" {
                 basename: string;
                 extension: string;
                 name: string;
-                // is this complete?
             }
         ) => string | Promise<string>;
     }
