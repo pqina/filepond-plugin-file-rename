@@ -1,5 +1,5 @@
 /*!
- * FilePondPluginFileRename 1.1.5
+ * FilePondPluginFileRename 1.1.6
  * Licensed under MIT, https://opensource.org/licenses/MIT/
  * Please visit https://pqina.nl/filepond/ for details.
  */
